@@ -1,0 +1,19 @@
+Votre tache est :
+
+<p></p>
+
+<%= @task.task %>
+<p></p>
+Statut : <%= @task.statut %>
+<p></p>
+Suivez ce lien pour modifier cette tache :
+<%= link_to "Edition", edit_task_path %>
+<p></p>
+Suivez ce lien pour supprimer la tache
+<%= link_to "Supprimer", task_path(@task), method: :delete,
+  data: { confirm: "Are you sure?" } %>
+
+<p></p>
+Retour à la liste des taches :
+<%= link_to "Index", tasks_path %>
+
